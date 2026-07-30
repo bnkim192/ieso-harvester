@@ -51,10 +51,6 @@
   "PUB_PriceHOEPPredispOR_2025_v119.csv"
  ],
  "https://reports-public.ieso.ca/public/RealtimeOntarioZonalPrice/": [
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v11.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v12.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v2.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v3.xml",
   "PUB_RealtimeOntarioZonalPrice_2026072924_v4.xml",
   "PUB_RealtimeOntarioZonalPrice_2026072924_v5.xml",
   "PUB_RealtimeOntarioZonalPrice_2026072924_v6.xml",
@@ -103,6 +99,8 @@
   "PUB_RealtimeOntarioZonalPrice_2026073004.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v1.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v10.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073004_v11.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073004_v12.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v2.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v3.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v4.xml",
@@ -110,7 +108,9 @@
   "PUB_RealtimeOntarioZonalPrice_2026073004_v6.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v7.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v8.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026073004_v9.xml"
+  "PUB_RealtimeOntarioZonalPrice_2026073004_v9.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073005.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073005_v1.xml"
  ],
  "https://reports-public.ieso.ca/public/GlobalAdjustment/": [
   "PUB_GlobalAdjustment.xml",
@@ -194,10 +194,6 @@
   "PUB_PriceHOEPPredispOR_2025_v119.csv"
  ],
  "http://reports.ieso.ca/public/RealtimeOntarioZonalPrice/": [
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v11.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v12.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v2.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026072924_v3.xml",
   "PUB_RealtimeOntarioZonalPrice_2026072924_v4.xml",
   "PUB_RealtimeOntarioZonalPrice_2026072924_v5.xml",
   "PUB_RealtimeOntarioZonalPrice_2026072924_v6.xml",
@@ -246,6 +242,8 @@
   "PUB_RealtimeOntarioZonalPrice_2026073004.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v1.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v10.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073004_v11.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073004_v12.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v2.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v3.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v4.xml",
@@ -253,7 +251,9 @@
   "PUB_RealtimeOntarioZonalPrice_2026073004_v6.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v7.xml",
   "PUB_RealtimeOntarioZonalPrice_2026073004_v8.xml",
-  "PUB_RealtimeOntarioZonalPrice_2026073004_v9.xml"
+  "PUB_RealtimeOntarioZonalPrice_2026073004_v9.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073005.xml",
+  "PUB_RealtimeOntarioZonalPrice_2026073005_v1.xml"
  ],
  "http://reports.ieso.ca/public/GlobalAdjustment/": [
   "PUB_GlobalAdjustment.xml",
