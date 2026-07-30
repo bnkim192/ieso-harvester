@@ -1,0 +1,39 @@
+name: IESO Harvester
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: discover IESO public reports
+        continue-on-error: true
+        run: python fetch_ieso.py --discover
+      - name: fetch IESO monthly
+        run: python fetch_ieso.py
+      - name: upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ieso-result
+          path: |
+            ot_wholesale_monthly.json
+            ot_wholesale_monthly.csv
+            ot_ga_monthly.json
+            ot_probe.json
+      - name: commit back
+        if: always()
+        run: |
+          git config user.name "ieso-bot"
+          git config user.email "ieso-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: ieso collect $(date +%F)" || echo "no change"
+          git push || echo "push skip"
