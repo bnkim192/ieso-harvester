@@ -1,0 +1,79 @@
+{
+ "source": "IESO GlobalAdjustment monthly XML",
+ "months": 14,
+ "note": "단위·의미는 태그 구조 로그로 확인 후 확정(1차 자동추출값)",
+ "used_urls": {
+  "2025-07": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202507.xml",
+  "2025-08": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202508.xml",
+  "2025-09": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202509.xml",
+  "2025-10": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202510.xml",
+  "2025-11": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202511.xml",
+  "2025-12": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202512.xml",
+  "2026-01": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202601.xml",
+  "2026-02": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202602.xml",
+  "2026-03": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202603.xml",
+  "2026-04": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202604.xml",
+  "2026-05": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202605.xml",
+  "2026-06": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202606.xml",
+  "2026-07": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202607.xml",
+  "2026-08": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202608.xml"
+ },
+ "series": [
+  {
+   "ym": "2025-07",
+   "value": 115.93
+  },
+  {
+   "ym": "2025-08",
+   "value": 3.0
+  },
+  {
+   "ym": "2025-09",
+   "value": 3.0
+  },
+  {
+   "ym": "2025-10",
+   "value": 74.82
+  },
+  {
+   "ym": "2025-11",
+   "value": 39.61
+  },
+  {
+   "ym": "2025-12",
+   "value": 22.26
+  },
+  {
+   "ym": "2026-01",
+   "value": 14.38
+  },
+  {
+   "ym": "2026-02",
+   "value": -2.92
+  },
+  {
+   "ym": "2026-03",
+   "value": -40.62
+  },
+  {
+   "ym": "2026-04",
+   "value": 0.06
+  },
+  {
+   "ym": "2026-05",
+   "value": 72.7
+  },
+  {
+   "ym": "2026-06",
+   "value": 99.1
+  },
+  {
+   "ym": "2026-07",
+   "value": 91.57
+  },
+  {
+   "ym": "2026-08",
+   "value": 25.95
+  }
+ ]
+}

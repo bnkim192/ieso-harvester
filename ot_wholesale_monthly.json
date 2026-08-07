@@ -2,8 +2,11 @@
  "source": "IESO public reports (Ontario) — monthly average of hourly",
  "zone": "OT",
  "unit": "CAD/MWh",
- "note": "에너지(도매) 성분만. 사업장 all-in = 에너지 + Global Adjustment + 송배전 + 규제요금. GA는 시장가와 역상관(시장가↓→GA↑)이라 all-in은 도매보다 훨씬 안정적 — 파일럿은 사업장 앵커에 스케일해서 사용.",
+ "note": "에너지(도매) 성분만. 사업장 all-in = 에너지 + Global Adjustment + 송배전(월 최대수요 kW 비례) + 규제요금.",
  "months": 88,
+ "latest": "2025-04",
+ "lag_months": 16,
+ "gap_warning": "HOEP는 2025-04까지만 존재(2025-05 MRP 개편으로 종료 추정). 개편 후 구간은 미수집 상태.",
  "used_urls": {
   "2018": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2018.csv",
   "2019": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2019.csv",
