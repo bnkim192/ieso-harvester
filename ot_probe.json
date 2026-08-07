@@ -40,9 +40,9 @@
    ]
   },
   "RealtimeOntarioZonalPrice": {
-   "count": 12823,
+   "count": 12605,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12822,
+    "YYYYMMDDHH(시간별)": 12604,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -50,11 +50,11 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeOntarioZonalPrice_2026080702_v9.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080703.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080703_v1.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080703_v2.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080703_v3.xml"
+    "PUB_RealtimeOntarioZonalPrice_2026080710_v4.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080710_v5.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080710_v6.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080710_v7.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080710_v8.xml"
    ]
   },
   "GlobalAdjustment": {
@@ -136,9 +136,9 @@
    ]
   },
   "RealtimeEnergyLMP": {
-   "count": 12842,
+   "count": 12624,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12841,
+    "YYYYMMDDHH(시간별)": 12623,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -146,24 +146,23 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeEnergyLMP_2026080702_v9.csv",
-    "PUB_RealtimeEnergyLMP_2026080703.csv",
-    "PUB_RealtimeEnergyLMP_2026080703_v1.csv",
-    "PUB_RealtimeEnergyLMP_2026080703_v2.csv",
-    "PUB_RealtimeEnergyLMP_2026080703_v3.csv"
+    "PUB_RealtimeEnergyLMP_2026080710_v4.csv",
+    "PUB_RealtimeEnergyLMP_2026080710_v5.csv",
+    "PUB_RealtimeEnergyLMP_2026080710_v6.csv",
+    "PUB_RealtimeEnergyLMP_2026080710_v7.csv",
+    "PUB_RealtimeEnergyLMP_2026080710_v8.csv"
    ]
   },
   "DemandZonal": {
-   "count": 50,
+   "count": 51,
    "stats": {
     "YYYYMMDDHH(시간별)": 0,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
-    "YYYY(연간)": 49,
+    "YYYY(연간)": 50,
     "무날짜": 1
    },
    "agg_examples": [
-    "PUB_DemandZonal_2017_v2.csv",
     "PUB_DemandZonal_2018.csv",
     "PUB_DemandZonal_2018_v254.csv",
     "PUB_DemandZonal_2019.csv",
@@ -182,21 +181,22 @@
     "PUB_DemandZonal_2025_v393.csv",
     "PUB_DemandZonal_2026.csv",
     "PUB_DemandZonal_2026_v216.csv",
-    "PUB_DemandZonal_2026_v217.csv"
+    "PUB_DemandZonal_2026_v217.csv",
+    "PUB_DemandZonal_2026_v218.csv"
    ],
    "last": [
-    "PUB_DemandZonal_2025.csv",
     "PUB_DemandZonal_2025_v393.csv",
     "PUB_DemandZonal_2026.csv",
     "PUB_DemandZonal_2026_v216.csv",
-    "PUB_DemandZonal_2026_v217.csv"
+    "PUB_DemandZonal_2026_v217.csv",
+    "PUB_DemandZonal_2026_v218.csv"
    ]
   }
  },
  "patterns": {
   "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice.xml": {
    "http": 200,
-   "len": 2295,
+   "len": 2611,
    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/RealtimeOntarioZonalPrice_HTML_t"
   },
   "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260805.xml": {
@@ -250,5 +250,5 @@
    "head": ""
   }
  },
- "checked_at": "2026-08-07T07:10"
+ "checked_at": "2026-08-07T14:36"
 }
