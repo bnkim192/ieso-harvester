@@ -40,9 +40,9 @@
    ]
   },
   "RealtimeOntarioZonalPrice": {
-   "count": 12605,
+   "count": 12615,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12604,
+    "YYYYMMDDHH(시간별)": 12614,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -50,11 +50,11 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeOntarioZonalPrice_2026080710_v4.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080710_v5.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080710_v6.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080710_v7.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080710_v8.xml"
+    "PUB_RealtimeOntarioZonalPrice_2026080807_v7.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080807_v8.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080807_v9.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080808.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080808_v1.xml"
    ]
   },
   "GlobalAdjustment": {
@@ -106,8 +106,6 @@
     "무날짜": 1
    },
    "agg_examples": [
-    "PUB_DAHourlyOntarioZonalPrice_20260729.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260729_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260730.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260730_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260731.xml",
@@ -125,20 +123,22 @@
     "PUB_DAHourlyOntarioZonalPrice_20260806.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260806_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260807.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260807_v1.xml"
+    "PUB_DAHourlyOntarioZonalPrice_20260807_v1.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260808.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml"
    ],
    "last": [
-    "PUB_DAHourlyOntarioZonalPrice_20260805_v1.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260806.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260806_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260807.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260807_v1.xml"
+    "PUB_DAHourlyOntarioZonalPrice_20260807_v1.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260808.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml"
    ]
   },
   "RealtimeEnergyLMP": {
-   "count": 12624,
+   "count": 12599,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12623,
+    "YYYYMMDDHH(시간별)": 12598,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -146,23 +146,24 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeEnergyLMP_2026080710_v4.csv",
-    "PUB_RealtimeEnergyLMP_2026080710_v5.csv",
-    "PUB_RealtimeEnergyLMP_2026080710_v6.csv",
-    "PUB_RealtimeEnergyLMP_2026080710_v7.csv",
-    "PUB_RealtimeEnergyLMP_2026080710_v8.csv"
+    "PUB_RealtimeEnergyLMP_2026080807_v7.csv",
+    "PUB_RealtimeEnergyLMP_2026080807_v8.csv",
+    "PUB_RealtimeEnergyLMP_2026080807_v9.csv",
+    "PUB_RealtimeEnergyLMP_2026080808.csv",
+    "PUB_RealtimeEnergyLMP_2026080808_v1.csv"
    ]
   },
   "DemandZonal": {
-   "count": 51,
+   "count": 50,
    "stats": {
     "YYYYMMDDHH(시간별)": 0,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
-    "YYYY(연간)": 50,
+    "YYYY(연간)": 49,
     "무날짜": 1
    },
    "agg_examples": [
+    "PUB_DemandZonal_2017_v2.csv",
     "PUB_DemandZonal_2018.csv",
     "PUB_DemandZonal_2018_v254.csv",
     "PUB_DemandZonal_2019.csv",
@@ -180,14 +181,13 @@
     "PUB_DemandZonal_2025.csv",
     "PUB_DemandZonal_2025_v393.csv",
     "PUB_DemandZonal_2026.csv",
-    "PUB_DemandZonal_2026_v216.csv",
     "PUB_DemandZonal_2026_v217.csv",
     "PUB_DemandZonal_2026_v218.csv"
    ],
    "last": [
+    "PUB_DemandZonal_2025.csv",
     "PUB_DemandZonal_2025_v393.csv",
     "PUB_DemandZonal_2026.csv",
-    "PUB_DemandZonal_2026_v216.csv",
     "PUB_DemandZonal_2026_v217.csv",
     "PUB_DemandZonal_2026_v218.csv"
    ]
@@ -196,15 +196,15 @@
  "patterns": {
   "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice.xml": {
    "http": 200,
-   "len": 2611,
+   "len": 2167,
    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/RealtimeOntarioZonalPrice_HTML_t"
   },
-  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260805.xml": {
+  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260806.xml": {
    "http": 404,
    "len": 196,
    "head": ""
   },
-  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260805.csv": {
+  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260806.csv": {
    "http": 404,
    "len": 196,
    "head": ""
@@ -250,5 +250,5 @@
    "head": ""
   }
  },
- "checked_at": "2026-08-07T14:36"
+ "checked_at": "2026-08-08T11:59"
 }
