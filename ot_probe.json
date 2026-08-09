@@ -40,9 +40,9 @@
    ]
   },
   "RealtimeOntarioZonalPrice": {
-   "count": 12615,
+   "count": 12618,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12614,
+    "YYYYMMDDHH(시간별)": 12617,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -50,11 +50,11 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeOntarioZonalPrice_2026080807_v7.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080807_v8.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080807_v9.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080808.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026080808_v1.xml"
+    "PUB_RealtimeOntarioZonalPrice_2026080907_v7.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080907_v8.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080907_v9.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080908.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026080908_v1.xml"
    ]
   },
   "GlobalAdjustment": {
@@ -106,8 +106,6 @@
     "무날짜": 1
    },
    "agg_examples": [
-    "PUB_DAHourlyOntarioZonalPrice_20260730.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260730_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260731.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260731_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260801.xml",
@@ -125,20 +123,22 @@
     "PUB_DAHourlyOntarioZonalPrice_20260807.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260807_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260808.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml"
+    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260809.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260809_v1.xml"
    ],
    "last": [
-    "PUB_DAHourlyOntarioZonalPrice_20260806_v1.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260807.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260807_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260808.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml"
+    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260809.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260809_v1.xml"
    ]
   },
   "RealtimeEnergyLMP": {
-   "count": 12599,
+   "count": 12601,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12598,
+    "YYYYMMDDHH(시간별)": 12600,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -146,11 +146,11 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeEnergyLMP_2026080807_v7.csv",
-    "PUB_RealtimeEnergyLMP_2026080807_v8.csv",
-    "PUB_RealtimeEnergyLMP_2026080807_v9.csv",
-    "PUB_RealtimeEnergyLMP_2026080808.csv",
-    "PUB_RealtimeEnergyLMP_2026080808_v1.csv"
+    "PUB_RealtimeEnergyLMP_2026080907_v7.csv",
+    "PUB_RealtimeEnergyLMP_2026080907_v8.csv",
+    "PUB_RealtimeEnergyLMP_2026080907_v9.csv",
+    "PUB_RealtimeEnergyLMP_2026080908.csv",
+    "PUB_RealtimeEnergyLMP_2026080908_v1.csv"
    ]
   },
   "DemandZonal": {
@@ -181,15 +181,15 @@
     "PUB_DemandZonal_2025.csv",
     "PUB_DemandZonal_2025_v393.csv",
     "PUB_DemandZonal_2026.csv",
-    "PUB_DemandZonal_2026_v217.csv",
-    "PUB_DemandZonal_2026_v218.csv"
+    "PUB_DemandZonal_2026_v218.csv",
+    "PUB_DemandZonal_2026_v219.csv"
    ],
    "last": [
     "PUB_DemandZonal_2025.csv",
     "PUB_DemandZonal_2025_v393.csv",
     "PUB_DemandZonal_2026.csv",
-    "PUB_DemandZonal_2026_v217.csv",
-    "PUB_DemandZonal_2026_v218.csv"
+    "PUB_DemandZonal_2026_v218.csv",
+    "PUB_DemandZonal_2026_v219.csv"
    ]
   }
  },
@@ -199,12 +199,12 @@
    "len": 2167,
    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/RealtimeOntarioZonalPrice_HTML_t"
   },
-  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260806.xml": {
+  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260807.xml": {
    "http": 404,
    "len": 196,
    "head": ""
   },
-  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260806.csv": {
+  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260807.csv": {
    "http": 404,
    "len": 196,
    "head": ""
@@ -250,5 +250,5 @@
    "head": ""
   }
  },
- "checked_at": "2026-08-08T11:59"
+ "checked_at": "2026-08-09T12:01"
 }
