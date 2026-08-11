@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-08-11T01:25",
+ "checked_at": "2026-08-11T02:00",
  "zonal_ladder": [
   {
    "ymd": "20250501",
@@ -186,6 +186,55 @@
   },
   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/DAHourlyOntarioZonalPrice_HTML_t1-1.xsl\" ?>\n<Document docID=\"DAHourlyOntarioZonalPrice\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ieso.ca/schema https://reports-public.ieso.ca/docrefs/schema/DAHourlyOntarioZonalPrice_r1.xsd\">\n<DocHeader>\n<DocTitle>Day Ahead Hourly Ontario Zonal Energy Price Report</DocTitle>\n<DocRevision>1</DocRevision>\n<DocConfidentiality>\n<DocConfClass>PUB</DocConfClass>\n</DocConfidentiality>\n<CreatedAt>2026-05-31T12:31:11</CreatedAt>\n</DocHeader>\n<DocBody>\n<DeliveryDate>"
  },
+ "zonal_xsd": {
+  "url": "https://reports-public.ieso.ca/docrefs/schema/DAHourlyOntarioZonalPrice_r1.xsd",
+  "elements": [
+   {
+    "name": "DocBody",
+    "type": null
+   },
+   {
+    "name": "DeliveryDate",
+    "type": "xs:date"
+   },
+   {
+    "name": "HourlyPriceComponents",
+    "type": null
+   },
+   {
+    "name": "PricingHour",
+    "type": "Hour1To24"
+   },
+   {
+    "name": "ZonalPrice",
+    "type": "empty_or_decimal"
+   },
+   {
+    "name": "LossPriceCapped",
+    "type": "empty_or_decimal"
+   },
+   {
+    "name": "CongestionPriceCapped",
+    "type": "empty_or_decimal"
+   },
+   {
+    "name": "Flag",
+    "type": "xs:string"
+   }
+  ],
+  "documentation": [
+   "Document Body",
+   "The Date for which this predispatch data applies",
+   "The Intertie Pricing Location for which the LMP applies",
+   "LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit)",
+   "LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit)",
+   "LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit)",
+   "Indicates if the data is administered or from the DSO-RD",
+   "The Hour for which this predispatch data applies (1 to 24)",
+   "Money - 2 decimals"
+  ],
+  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- Day-Ahead Hourly Ontario Zonal Energy Price Report XML Schema -->\n<xs:schema targetNamespace=\"http://www.ieso.ca/schema\" elementFormDefault=\"qualified\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\t<!-- Following stuff is report specific -->\n\t<xs:include schemaLocation=\"Document_r1.xsd\"/>\n\t<xs:element name=\"DocBody\">\n\t\t<xs:annotation>\n\t\t\t<xs:documentation>Document Body</xs:documentation>\n\t\t</xs:annotation>\n\t\t<xs:complexType>\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:element name=\"DeliveryDate\" type=\"xs:date\">\n\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t<xs:documentation>The Date for which this predispatch data applies</xs:documentation>\n\t\t\t\t\t</xs:annotation>\n\t\t\t\t</xs:element>\n\t\t\t\t<xs:element name=\"HourlyPriceComponents\" maxOccurs=\"24\">\n\t\t\t\t\t<xs:complexType>\n\t\t\t\t\t\t<xs:sequence>\n\t\t\t\t\t\t\t<xs:element name=\"PricingHour\" type=\"Hour1To24\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>The Intertie Pricing Location for which the LMP applies</xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"ZonalPrice\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit) </xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"LossPriceCapped\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs component"
+ },
  "zonal_used_tags": {
   "ZonalPrice": 72
  },
@@ -264,5 +313,54 @@
    }
   },
   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/GlobalAdjustment_HTML_t1-2.xsl\" ?>\n<Document docID=\"GlobalAdjustment\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ieso.ca/schema https://reports-public.ieso.ca/docrefs/schema/GlobalAdjustment_r1.xsd\">\n<DocHeader>\n<DocTitle>IESO Global Adjustment Class B Rates</DocTitle>\n<DocRevision>1</DocRevision>\n<DocConfidentiality>\n<DocConfClass>PUB</DocConfClass>\n</DocConfidentiality>\n<CreatedAt>2025-08-15T14:30:15</CreatedAt>\n</DocHeader>\n<DocBody>\n<TradeMonth>2025-07</TradeMonth>\n<GAValues>\n<FirstEstim"
+ },
+ "ga_xsd": {
+  "url": "https://reports-public.ieso.ca/docrefs/schema/GlobalAdjustment_r1.xsd",
+  "elements": [
+   {
+    "name": "DocBody",
+    "type": null
+   },
+   {
+    "name": "TradeMonth",
+    "type": "xs:string"
+   },
+   {
+    "name": "GAValues",
+    "type": null
+   },
+   {
+    "name": "FirstEstimateRate",
+    "type": "Money"
+   },
+   {
+    "name": "SecondEstimate",
+    "type": "Money"
+   },
+   {
+    "name": "SecondEstimateRate",
+    "type": "Money"
+   },
+   {
+    "name": "Actual",
+    "type": "Money"
+   },
+   {
+    "name": "ActualRate",
+    "type": "Money"
+   }
+  ],
+  "documentation": [
+   "Document Body",
+   "The Month and Year for which this data applies",
+   "First estimate of GA rate in $/MWh",
+   "Second estimate of GA dollars in M$",
+   "Second estimate of GA rate in $/MWh",
+   "Actual GA dollars in M$",
+   "Actual GA rate in $/MWh",
+   "Money - 2 decimals",
+   "The Hour for which this data applies (1 to 24)"
+  ],
+  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Fujtsu Canada Inc -->\n<!--   Global Adjustment Report XML Schema   -->\n<xs:schema xmlns=\"http://www.ieso.ca/schema\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"http://www.ieso.ca/schema\" elementFormDefault=\"qualified\">\n\t<!--  Following stuff is report specific   -->\n\t<xs:include schemaLocation=\"Document_r1.xsd\"/>\n\t<xs:element name=\"DocBody\">\n\t\t<xs:annotation>\n\t\t\t<xs:documentation>Document Body</xs:documentation>\n\t\t</xs:annotation>\n\t\t<xs:complexType>\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:element name=\"TradeMonth\" type=\"xs:string\">\n\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t<xs:documentation>The Month and Year for which this data applies</xs:documentation>\n\t\t\t\t\t</xs:annotation>\n\t\t\t\t</xs:element>\n\t\t\t\t<xs:element name=\"GAValues\">\n\t\t\t\t\t<xs:complexType>\n\t\t\t\t\t\t<xs:sequence>\n\t\t\t\t\t\t\t<xs:element name=\"FirstEstimateRate\" type=\"Money\" minOccurs=\"0\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>First estimate of GA rate in $/MWh</xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"SecondEstimate\" type=\"Money\" minOccurs=\"0\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>Second estimate of GA dollars in M$</xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"SecondEstimateRate\" type=\"Money\" minOccurs=\"0\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>Second estimate of GA rate in $/MWh</xs:documentation>\n\t\t\t\t\t\t\t\t</x"
  }
 }

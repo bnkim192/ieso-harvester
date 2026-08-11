@@ -1,7 +1,9 @@
 {
  "source": "IESO public reports (Ontario)",
+ "version": "v4",
  "zone": "OT",
  "unit": "CAD/MWh",
+ "merge_policy": "존가격은 ym 기준 병합. 신규 days >= 기존 days 인 달만 교체(롤링 절단 보호). HOEP·GA도 수집 0이면 기존 유지.",
  "regimes": {
   "hoep": {
    "desc": "구 체계 HOEP(단일 온타리오 가격). 2025-05 MRP 개편으로 발행 중단",
@@ -12,7 +14,7 @@
    ]
   },
   "zonal": {
-   "desc": "개편 후 Day-Ahead Hourly Ontario Zonal Price(일별 XML 월평균)",
+   "desc": "개편 후 Day-Ahead Hourly Ontario Zonal Price(일별 XML 월평균). 태그 ZonalPrice",
    "months": 3,
    "range": [
     "2026-06",
@@ -20,13 +22,19 @@
    ],
    "used_tags": {
     "ZonalPrice": 72
-   }
+   },
+   "components_note": "components = 같은 파일에서 하루 24개로 오는 다른 수치 태그의 월평균(LossPriceCapped·CongestionPriceCapped 등). ZonalPrice가 총액인지 에너지분인지 XSD로 확정할 때 쓴다."
   }
  },
- "note": "⚠️ HOEP와 존가격은 가격 정의가 달라 하나로 이어붙이지 않았다(레짐 단절이 ETS를 오염시킴). 파일럿이 두 계열을 각각 받아 판단한다. all-in = 에너지 + GA + 송전(월 최대수요 kW) + 규제요금.",
+ "note": "⚠️ HOEP와 존가격은 가격 정의가 달라 하나로 이어붙이지 않았다(레짐 단절이 ETS를 오염시킴). 파일럿이 두 계열을 각각 받아 판단한다. all-in = 에너지 + GA(Class A·ICI) + 송전(월 최대수요 kW) + 규제요금.",
  "latest": "2026-08",
  "lag_months": 0,
- "gap_warning": "HOEP 종료(2025-04)와 존가격 보존 시작(2026-06) 사이가 비어 있을 수 있음",
+ "gap": {
+  "months": 13,
+  "from": "2025-05",
+  "to": "2026-05",
+  "note": "IESO 롤링 윈도로 이미 삭제된 구간 — 영구 결손"
+ },
  "used_urls": {
   "2018": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2018.csv",
   "2019": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2019.csv",
@@ -483,17 +491,35 @@
   {
    "ym": "2026-06",
    "cad_mwh": 44.93,
-   "days": 30
+   "days": 30,
+   "components": {
+    "CongestionPriceCapped": -0.2217,
+    "LossPriceCapped": -0.0631,
+    "ZonalPrice": 44.9296
+   },
+   "vintage": "2026-08-11"
   },
   {
    "ym": "2026-07",
    "cad_mwh": 71.824,
-   "days": 31
+   "days": 31,
+   "components": {
+    "CongestionPriceCapped": -0.3064,
+    "LossPriceCapped": -0.0989,
+    "ZonalPrice": 71.8244
+   },
+   "vintage": "2026-08-11"
   },
   {
    "ym": "2026-08",
    "cad_mwh": 72.243,
-   "days": 11
+   "days": 11,
+   "components": {
+    "CongestionPriceCapped": -1.9958,
+    "LossPriceCapped": -0.2559,
+    "ZonalPrice": 72.2427
+   },
+   "vintage": "2026-08-11"
   }
  ]
 }
