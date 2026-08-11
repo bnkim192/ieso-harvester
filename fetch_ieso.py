@@ -30,9 +30,23 @@ IESO(캐나다 온타리오) 수집기 v4 — 누적 병합 저장 + 성분 전�
      (GA는 FirstEstimate → SecondEstimate → Actual 로 개정되므로 vintage가 필수다.)
   E) utcnow() → now(dt.UTC). 로그를 덮던 DeprecationWarning 6건 제거(진단 가독성).
 
+■ v5가 더하는 것 — MRP 개편 후 결손구간(2025-05~2026-05) 백필 경로 탐색
+  F) 일별 존가격은 롤링 윈도(≈72일)라 2026-06 이전이 전부 404다(v4 사다리로 확인).
+     이 13개월을 되찾을 다른 경로가 있는지 **러너가 직접 탐색**한다. 사내망은 IESO가 403이라
+     여기서 확인이 불가능하므로, 추측한 URL을 코드에 박지 않고 다음 순서로 실측한다.
+       1) 공개 루트 디렉터리 목록을 받아 zonal·price·hoep·lmp·energy 계열 폴더를 전부 나열
+       2) 각 폴더에 IESO 자체 관례인 `PUB_{폴더명}_{연도}.csv` 연간 파일이 있는지 HTTP로 확인
+          (HOEP가 PUB_PriceHOEPPredispOR_2025.csv 로 오는 그 규칙)
+       3) 열리는 연간 CSV는 월평균으로 집계해 **series_zonal_backfill 에 따로** 담는다
+  G) [원칙] 백필은 series_zonal 에 병합하지 않는다. 연간 CSV가 DA인지 RT인지, 총액인지
+     에너지분인지 미확인이라 섞으면 레짐이 오염된다. 별 필드 + 출처 URL 기록까지만 하고,
+     정의가 확인된 뒤에 합치는 판단은 사람이 한다.
+  H) 백필 대상은 ym >= 2025-05 만 취한다(그 이전은 HOEP 계열이 이미 확정본).
+
 ■ 사용
-  python fetch_ieso.py --discover   # 탐색만
-  python fetch_ieso.py              # 탐색 + 수집 + 병합 저장
+  python fetch_ieso.py --discover            # 보존범위 사다리만
+  python fetch_ieso.py --discover-backfill   # 백필 경로 탐색만(디렉터리·연간CSV)
+  python fetch_ieso.py                       # 탐색 + 수집 + 백필 + 병합 저장
 """
 import os, sys, json, csv, re, io
 import datetime as dt
@@ -86,6 +100,120 @@ def shift_ym(ym, k):
     """'2025-04' 을 k개월 이동."""
     t = int(ym[:4]) * 12 + int(ym[5:7]) - 1 + k
     return f"{t // 12:04d}-{t % 12 + 1:02d}"
+
+
+# ── F) 백필 경로 탐색 — 결손 13개월(2025-05~2026-05)을 되찾을 엔드포인트 찾기 ──
+BACKFILL_FROM = "2025-05"          # H) 이 이전은 HOEP 확정본이 있으므로 취하지 않는다
+MAX_PROBE_DIRS = 30                # 연간CSV 확인 폴더 상한(초과분은 로그에 남기고 생략)
+CAND_KEY = re.compile(r"zonal|price|hoep|lmp|energy|mktprice", re.I)
+
+
+def list_dir(path=""):
+    """공개 디렉터리 목록을 받아 href 를 그대로 뽑는다(구조 가정 없이 실측)."""
+    code, body = get(f"{HOST}/{path}")
+    if code != 200:
+        return code, []
+    return code, re.findall(r'href="([^"?#][^"]*)"', body)
+
+
+def discover_dirs(probe):
+    code, names = list_dir("")
+    dirs = sorted({n.strip("/").split("/")[-1] for n in names
+                   if n.endswith("/") and not n.startswith("..")})
+    hits = [d for d in dirs if d and CAND_KEY.search(d)]
+    probe["root_listing_http"] = code
+    probe["root_dirs_total"] = len(dirs)
+    probe["root_dirs_price"] = hits
+    print(f"[탐색1] 루트 HTTP {code} · 폴더 {len(dirs)}개 · 가격계열 {len(hits)}개", flush=True)
+    for d in hits:
+        print(f"   · {d}", flush=True)
+    if code != 200:
+        print("   ⚠️ 루트 목록을 못 받았다 → 알려진 폴더만으로 진행", flush=True)
+    if len(hits) > MAX_PROBE_DIRS:                     # 요청 폭주 방지 — 자른 사실을 로그에 남긴다
+        print(f"   ⚠️ 가격계열 {len(hits)}개 중 앞 {MAX_PROBE_DIRS}개만 확인한다 "
+              f"(생략: {hits[MAX_PROBE_DIRS:]})", flush=True)
+        probe["root_dirs_skipped"] = hits[MAX_PROBE_DIRS:]
+        hits = hits[:MAX_PROBE_DIRS]
+    return hits or [ZONAL_DIR, "PriceHOEPPredispOR"]
+
+
+def discover_annual(dirs, probe):
+    """PUB_{폴더명}_{연도}.csv 규칙(HOEP가 쓰는 그 규칙)으로 연간 파일 존재를 확인."""
+    found, checked = {}, []
+    for d in dirs:
+        for y in (2025, 2026):
+            url = f"{HOST}/{d}/PUB_{d}_{y}.csv"
+            code, body = get(url)
+            ok = (code == 200 and len(body) > 200)
+            checked.append({"url": url, "http": code, "len": len(body), "ok": ok})
+            print(f"  {'✅' if ok else '❌'} {url} HTTP {code} len={len(body)}", flush=True)
+            if ok:
+                found[f"{d}_{y}"] = {"dir": d, "year": y, "url": url,
+                                     "len": len(body), "head": body[:300]}
+    probe["annual_csv_checked"] = checked
+    probe["annual_csv_found"] = {k: {i: v[i] for i in ("url", "len", "head")}
+                                 for k, v in found.items()}
+    print(f"[탐색2] 연간 CSV {len(found)}건 확인 / 시도 {len(checked)}건", flush=True)
+    return found
+
+
+def collect_backfill(found, probe):
+    """열린 연간 CSV를 월평균으로 집계. series_zonal 에 병합하지 않고 별 계열로 둔다(G)."""
+    if not found:
+        print("[백필] 후보 연간 CSV 없음 — 결손 13개월은 현재 경로로 복구 불가", flush=True)
+        return []
+    acc, srcs, notes = {}, {}, []
+    for k, meta in found.items():
+        code, body = get(meta["url"])
+        if code != 200 or len(body) < 200:
+            continue
+        lines = body.splitlines()
+        hi = find_header(lines)
+        if hi is None:
+            notes.append(f"{k}: 헤더 미검출")
+            continue
+        rows = list(csv.reader(io.StringIO("\n".join(lines[hi:]))))
+        if not rows:
+            notes.append(f"{k}: 헤더 이후 행 없음")
+            continue
+        cols = rows[0]
+        di = pick_col(cols, ["date", "delivery date"])
+        vi = pick_col(cols, ["zonal price", "zonalprice", "hoep", "price"])
+        zi = pick_col(cols, ["zone", "zone name"])
+        if di is None or vi is None:
+            notes.append(f"{k}: 날짜/가격 컬럼 미검출 cols={cols[:8]}")
+            continue
+        n_all = n_used = 0
+        for r in rows[1:]:
+            if len(r) <= max(di, vi):
+                continue
+            n_all += 1
+            if zi is not None and len(r) > zi and r[zi].strip() \
+               and "ontario" not in r[zi].strip().lower():
+                continue                      # 존 컬럼이 있으면 Ontario 만
+            ym = ym_of(r[di])
+            if not ym or ym < BACKFILL_FROM:
+                continue
+            try:
+                v = float(str(r[vi]).replace(",", ""))
+            except Exception:
+                continue
+            a = acc.setdefault(ym, [0.0, 0]); a[0] += v; a[1] += 1
+            n_used += 1
+        srcs[k] = {"url": meta["url"], "rows_all": n_all, "rows_used": n_used,
+                   "cols": cols[:10], "value_col": cols[vi] if vi < len(cols) else None,
+                   "zone_col": cols[zi] if (zi is not None and zi < len(cols)) else None}
+        print(f"  [{k}] {n_all}행 중 {n_used}행 채택 · 가격컬럼 '{srcs[k]['value_col']}'", flush=True)
+    series = [{"ym": ym, "cad_mwh": round(s / c, 3), "n": c, "days": round(c / 24),
+               "vintage": TODAY}
+              for ym, (s, c) in sorted(acc.items()) if c]
+    probe["backfill_sources"] = srcs
+    probe["backfill_notes"] = notes
+    print(f"[백필] {len(series)}개월 확보"
+          + (f" ({series[0]['ym']}~{series[-1]['ym']})" if series else ""), flush=True)
+    if notes:
+        print(f"[백필] 미해결: {notes}", flush=True)
+    return series
 
 
 # ── A) 날짜 사다리 — 일별 존가격 보존 범위 확인 ────────────────────────────────
@@ -388,6 +516,15 @@ def collect_ga(probe):
 
 def main():
     probe = {"checked_at": dt.datetime.now(dt.UTC).isoformat()[:16]}
+
+    if "--discover-backfill" in sys.argv:
+        print("### F) 백필 경로 탐색만", flush=True)
+        found = discover_annual(discover_dirs(probe), probe)
+        collect_backfill(found, probe)
+        json.dump(probe, open(OUT_PROBE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"[DISCOVER-BACKFILL] {OUT_PROBE} 저장", flush=True)
+        return
+
     print("### A) 일별 존가격 보존 범위 사다리 탐색", flush=True)
     oldest = zonal_horizon(probe)
 
@@ -417,6 +554,10 @@ def main():
     print("### C-2) 누적 병합", flush=True)
     zonal = merge_zonal(prev_zonal, zonal_new)
 
+    print("### C-3) 결손구간 백필 탐색(2025-05~)", flush=True)
+    backfill_new = collect_backfill(discover_annual(discover_dirs(probe), probe), probe)
+    backfill = merge_zonal(prev.get("series_zonal_backfill", []), backfill_new)
+
     print("### D) GA", flush=True)
     ga = merge_ga(prev_ga.get("series", []), collect_ga(probe))
 
@@ -431,13 +572,20 @@ def main():
         n = (int(zonal[0]["ym"][:4]) * 12 + int(zonal[0]["ym"][5:7])) \
             - (int(hoep[-1]["ym"][:4]) * 12 + int(hoep[-1]["ym"][5:7])) - 1
         if n > 0:
-            gap = {"months": n, "from": shift_ym(hoep[-1]["ym"], 1),
+            have = {r["ym"] for r in backfill}
+            miss = [shift_ym(hoep[-1]["ym"], k) for k in range(1, n + 1)
+                    if shift_ym(hoep[-1]["ym"], k) not in have]
+            gap = {"months": len(miss), "from": shift_ym(hoep[-1]["ym"], 1),
                    "to": shift_ym(zonal[0]["ym"], -1),
-                   "note": "IESO 롤링 윈도로 이미 삭제된 구간 — 영구 결손"}
+                   "missing": miss,
+                   "backfilled": sorted(have & {shift_ym(hoep[-1]["ym"], k)
+                                                for k in range(1, n + 1)}),
+                   "note": "일별 존가격 롤링 윈도(≈72일) 밖 구간. backfilled 는 연간 CSV로 "
+                           "되찾은 달, missing 은 아직 복구 경로가 없는 달."}
 
     out = {
         "source": "IESO public reports (Ontario)",
-        "version": "v4",
+        "version": "v5",
         "zone": "OT", "unit": "CAD/MWh",
         "merge_policy": "존가격은 ym 기준 병합. 신규 days >= 기존 days 인 달만 교체(롤링 절단 보호). "
                         "HOEP·GA도 수집 0이면 기존 유지.",
@@ -450,14 +598,22 @@ def main():
                       "components_note": "components = 같은 파일에서 하루 24개로 오는 다른 수치 태그의 "
                                          "월평균(LossPriceCapped·CongestionPriceCapped 등). "
                                          "ZonalPrice가 총액인지 에너지분인지 XSD로 확정할 때 쓴다."},
+            "zonal_backfill": {
+                "desc": "개편 후 결손구간(2025-05~)을 연간 CSV(PUB_{폴더}_{연도}.csv)에서 되찾은 계열. "
+                        "DA/RT·총액/에너지분 정의가 미확인이므로 series_zonal 에 병합하지 않는다.",
+                "months": len(backfill),
+                "range": [backfill[0]["ym"], backfill[-1]["ym"]] if backfill else None,
+                "sources": probe.get("backfill_sources", {}),
+                "unresolved": probe.get("backfill_notes", [])},
         },
         "note": "⚠️ HOEP와 존가격은 가격 정의가 달라 하나로 이어붙이지 않았다(레짐 단절이 ETS를 오염시킴). "
                 "파일럿이 두 계열을 각각 받아 판단한다. "
                 "all-in = 에너지 + GA(Class A·ICI) + 송전(월 최대수요 kW) + 규제요금.",
         "latest": last, "lag_months": lag, "gap": gap,
         "used_urls": hused,
-        "series": hoep,          # 하위호환(기존 파일럿이 읽는 필드) = HOEP
-        "series_zonal": zonal,   # 개편 후 계열(누적 병합)
+        "series": hoep,                          # 하위호환(기존 파일럿이 읽는 필드) = HOEP
+        "series_zonal": zonal,                   # 개편 후 계열(일별 XML · 누적 병합)
+        "series_zonal_backfill": backfill,       # 개편 후 결손구간 복구분(연간 CSV · 미병합)
     }
     json.dump(out, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     with open(OUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
@@ -466,6 +622,9 @@ def main():
             w.writerow(["hoep", s["ym"], s["cad_mwh"], s["n"], s.get("vintage", "")])
         for s in zonal:
             w.writerow(["zonal", s["ym"], s["cad_mwh"], s["days"], s.get("vintage", "")])
+        for s in backfill:
+            w.writerow(["zonal_backfill", s["ym"], s["cad_mwh"],
+                        s.get("n", s.get("days")), s.get("vintage", "")])
     json.dump({"source": "IESO GlobalAdjustment monthly XML (Class B Rates)",
                "version": "v4",
                "note": "태그별 [평균, 개수] 를 그대로 저장. 어느 태그가 최종 Class B 요율인지는 "
@@ -474,8 +633,9 @@ def main():
                "months": len(ga), "series": ga},
               open(OUT_GA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(probe, open(OUT_PROBE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"[OK] HOEP {len(hoep)}개월 · 존가격 {len(zonal)}개월 · GA {len(ga)}개월 "
-          f"· 최신 {last}(지연 {lag}개월) · 결손 {gap['months'] if gap else 0}개월", flush=True)
+    print(f"[OK] HOEP {len(hoep)}개월 · 존가격 {len(zonal)}개월 · 백필 {len(backfill)}개월 "
+          f"· GA {len(ga)}개월 · 최신 {last}(지연 {lag}개월) "
+          f"· 미복구 결손 {gap['months'] if gap else 0}개월", flush=True)
 
 
 if __name__ == "__main__":
