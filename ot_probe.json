@@ -40,9 +40,9 @@
    ]
   },
   "RealtimeOntarioZonalPrice": {
-   "count": 12657,
+   "count": 12790,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12656,
+    "YYYYMMDDHH(시간별)": 12789,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -50,11 +50,11 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeOntarioZonalPrice_2026081010_v5.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026081010_v6.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026081010_v7.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026081010_v8.xml",
-    "PUB_RealtimeOntarioZonalPrice_2026081010_v9.xml"
+    "PUB_RealtimeOntarioZonalPrice_2026081020_v5.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026081020_v6.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026081020_v7.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026081020_v8.xml",
+    "PUB_RealtimeOntarioZonalPrice_2026081020_v9.xml"
    ]
   },
   "GlobalAdjustment": {
@@ -97,17 +97,15 @@
    ]
   },
   "DAHourlyOntarioZonalPrice": {
-   "count": 184,
+   "count": 186,
    "stats": {
     "YYYYMMDDHH(시간별)": 0,
-    "YYYYMMDD(일별)": 183,
+    "YYYYMMDD(일별)": 185,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
     "무날짜": 1
    },
    "agg_examples": [
-    "PUB_DAHourlyOntarioZonalPrice_20260801.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260801_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260802.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260802_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260803.xml",
@@ -125,20 +123,22 @@
     "PUB_DAHourlyOntarioZonalPrice_20260809.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260809_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260810.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260810_v1.xml"
+    "PUB_DAHourlyOntarioZonalPrice_20260810_v1.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260811.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260811_v1.xml"
    ],
    "last": [
-    "PUB_DAHourlyOntarioZonalPrice_20260808_v1.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260809.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260809_v1.xml",
     "PUB_DAHourlyOntarioZonalPrice_20260810.xml",
-    "PUB_DAHourlyOntarioZonalPrice_20260810_v1.xml"
+    "PUB_DAHourlyOntarioZonalPrice_20260810_v1.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260811.xml",
+    "PUB_DAHourlyOntarioZonalPrice_20260811_v1.xml"
    ]
   },
   "RealtimeEnergyLMP": {
-   "count": 12638,
+   "count": 12771,
    "stats": {
-    "YYYYMMDDHH(시간별)": 12637,
+    "YYYYMMDDHH(시간별)": 12770,
     "YYYYMMDD(일별)": 0,
     "YYYYMM(월별)": 0,
     "YYYY(연간)": 0,
@@ -146,11 +146,11 @@
    },
    "agg_examples": [],
    "last": [
-    "PUB_RealtimeEnergyLMP_2026081010_v5.csv",
-    "PUB_RealtimeEnergyLMP_2026081010_v6.csv",
-    "PUB_RealtimeEnergyLMP_2026081010_v7.csv",
-    "PUB_RealtimeEnergyLMP_2026081010_v8.csv",
-    "PUB_RealtimeEnergyLMP_2026081010_v9.csv"
+    "PUB_RealtimeEnergyLMP_2026081020_v5.csv",
+    "PUB_RealtimeEnergyLMP_2026081020_v6.csv",
+    "PUB_RealtimeEnergyLMP_2026081020_v7.csv",
+    "PUB_RealtimeEnergyLMP_2026081020_v8.csv",
+    "PUB_RealtimeEnergyLMP_2026081020_v9.csv"
    ]
   },
   "DemandZonal": {
@@ -196,15 +196,15 @@
  "patterns": {
   "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice.xml": {
    "http": 200,
-   "len": 2667,
+   "len": 2748,
    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/RealtimeOntarioZonalPrice_HTML_t"
   },
-  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260808.xml": {
+  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260809.xml": {
    "http": 404,
    "len": 196,
    "head": ""
   },
-  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260808.csv": {
+  "RealtimeOntarioZonalPrice/PUB_RealtimeOntarioZonalPrice_20260809.csv": {
    "http": 404,
    "len": 196,
    "head": ""
@@ -250,5 +250,5 @@
    "head": ""
   }
  },
- "checked_at": "2026-08-10T14:42"
+ "checked_at": "2026-08-11T00:45"
 }
