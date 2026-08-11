@@ -1,12 +1,32 @@
 {
- "source": "IESO public reports (Ontario) — monthly average of hourly",
+ "source": "IESO public reports (Ontario)",
  "zone": "OT",
  "unit": "CAD/MWh",
- "note": "에너지(도매) 성분만. 사업장 all-in = 에너지 + Global Adjustment + 송배전(월 최대수요 kW 비례) + 규제요금.",
- "months": 88,
- "latest": "2025-04",
- "lag_months": 16,
- "gap_warning": "HOEP는 2025-04까지만 존재(2025-05 MRP 개편으로 종료 추정). 개편 후 구간은 미수집 상태.",
+ "regimes": {
+  "hoep": {
+   "desc": "구 체계 HOEP(단일 온타리오 가격). 2025-05 MRP 개편으로 발행 중단",
+   "months": 88,
+   "range": [
+    "2018-01",
+    "2025-04"
+   ]
+  },
+  "zonal": {
+   "desc": "개편 후 Day-Ahead Hourly Ontario Zonal Price(일별 XML 월평균)",
+   "months": 3,
+   "range": [
+    "2026-06",
+    "2026-08"
+   ],
+   "used_tags": {
+    "ZonalPrice": 72
+   }
+  }
+ },
+ "note": "⚠️ HOEP와 존가격은 가격 정의가 달라 하나로 이어붙이지 않았다(레짐 단절이 ETS를 오염시킴). 파일럿이 두 계열을 각각 받아 판단한다. all-in = 에너지 + GA + 송전(월 최대수요 kW) + 규제요금.",
+ "latest": "2026-08",
+ "lag_months": 0,
+ "gap_warning": "HOEP 종료(2025-04)와 존가격 보존 시작(2026-06) 사이가 비어 있을 수 있음",
  "used_urls": {
   "2018": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2018.csv",
   "2019": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2019.csv",
@@ -457,6 +477,23 @@
    "ym": "2025-04",
    "cad_mwh": 39.181,
    "n": 720
+  }
+ ],
+ "series_zonal": [
+  {
+   "ym": "2026-06",
+   "cad_mwh": 44.93,
+   "days": 30
+  },
+  {
+   "ym": "2026-07",
+   "cad_mwh": 71.824,
+   "days": 31
+  },
+  {
+   "ym": "2026-08",
+   "cad_mwh": 72.243,
+   "days": 11
   }
  ]
 }

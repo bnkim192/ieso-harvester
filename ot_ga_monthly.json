@@ -1,79 +1,389 @@
 {
  "source": "IESO GlobalAdjustment monthly XML",
+ "note": "태그별 평균값을 그대로 저장. 어느 태그가 GA 단가인지 ot_probe.json의 ga_struct 로 확정 후 다음 버전에서 확정 파싱.",
  "months": 14,
- "note": "단위·의미는 태그 구조 로그로 확인 후 확정(1차 자동추출값)",
- "used_urls": {
-  "2025-07": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202507.xml",
-  "2025-08": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202508.xml",
-  "2025-09": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202509.xml",
-  "2025-10": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202510.xml",
-  "2025-11": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202511.xml",
-  "2025-12": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202512.xml",
-  "2026-01": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202601.xml",
-  "2026-02": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202602.xml",
-  "2026-03": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202603.xml",
-  "2026-04": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202604.xml",
-  "2026-05": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202605.xml",
-  "2026-06": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202606.xml",
-  "2026-07": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202607.xml",
-  "2026-08": "https://reports-public.ieso.ca/public/GlobalAdjustment/PUB_GlobalAdjustment_202608.xml"
- },
  "series": [
   {
    "ym": "2025-07",
-   "value": 115.93
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     115.93,
+     1
+    ],
+    "SecondEstimate": [
+     216393725.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     -1.76,
+     1
+    ],
+    "Actual": [
+     176156815.0,
+     1
+    ],
+    "ActualRate": [
+     14.38,
+     1
+    ]
+   }
   },
   {
    "ym": "2025-08",
-   "value": 3.0
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     3.0,
+     1
+    ],
+    "SecondEstimate": [
+     250565317.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     17.46,
+     1
+    ],
+    "Actual": [
+     332023003.0,
+     1
+    ],
+    "ActualRate": [
+     30.1,
+     1
+    ]
+   }
   },
   {
    "ym": "2025-09",
-   "value": 3.0
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     3.0,
+     1
+    ],
+    "SecondEstimate": [
+     630385367.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     81.91,
+     1
+    ],
+    "Actual": [
+     561630220.0,
+     1
+    ],
+    "ActualRate": [
+     61.85,
+     1
+    ]
+   }
   },
   {
    "ym": "2025-10",
-   "value": 74.82
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     74.82,
+     1
+    ],
+    "SecondEstimate": [
+     457889369.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     42.2,
+     1
+    ],
+    "Actual": [
+     445161830.0,
+     1
+    ],
+    "ActualRate": [
+     48.85,
+     1
+    ]
+   }
   },
   {
    "ym": "2025-11",
-   "value": 39.61
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     39.61,
+     1
+    ],
+    "SecondEstimate": [
+     264660246.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     25.5,
+     1
+    ],
+    "Actual": [
+     176396340.0,
+     1
+    ],
+    "ActualRate": [
+     18.16,
+     1
+    ]
+   }
   },
   {
    "ym": "2025-12",
-   "value": 22.26
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     22.26,
+     1
+    ],
+    "SecondEstimate": [
+     -219245824.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     -25.73,
+     1
+    ],
+    "Actual": [
+     -34391708.0,
+     1
+    ],
+    "ActualRate": [
+     -2.92,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-01",
-   "value": 14.38
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     14.38,
+     1
+    ],
+    "SecondEstimate": [
+     -64706687.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     9.51,
+     1
+    ],
+    "Actual": [
+     -493919231.0,
+     1
+    ],
+    "ActualRate": [
+     -40.62,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-02",
-   "value": -2.92
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     -2.92,
+     1
+    ],
+    "SecondEstimate": [
+     -368744380.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     -48.53,
+     1
+    ],
+    "Actual": [
+     -344601303.0,
+     1
+    ],
+    "ActualRate": [
+     -32.81,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-03",
-   "value": -40.62
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     -40.62,
+     1
+    ],
+    "SecondEstimate": [
+     681638827.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     50.19,
+     1
+    ],
+    "Actual": [
+     781435794.0,
+     1
+    ],
+    "ActualRate": [
+     72.7,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-04",
-   "value": 0.06
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     0.06,
+     1
+    ],
+    "SecondEstimate": [
+     873283420.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     92.4,
+     1
+    ],
+    "Actual": [
+     871317947.0,
+     1
+    ],
+    "ActualRate": [
+     99.1,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-05",
-   "value": 72.7
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     72.7,
+     1
+    ],
+    "SecondEstimate": [
+     920889750.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     105.52,
+     1
+    ],
+    "Actual": [
+     970596472.0,
+     1
+    ],
+    "ActualRate": [
+     99.51,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-06",
-   "value": 99.1
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     99.1,
+     1
+    ],
+    "SecondEstimate": [
+     888799972.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     84.59,
+     1
+    ],
+    "Actual": [
+     853853107.0,
+     1
+    ],
+    "ActualRate": [
+     84.13,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-07",
-   "value": 91.57
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     91.57,
+     1
+    ],
+    "SecondEstimate": [
+     401718418.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     29.42,
+     1
+    ]
+   }
   },
   {
    "ym": "2026-08",
-   "value": 25.95
+   "by_tag": {
+    "DocRevision": [
+     1.0,
+     1
+    ],
+    "FirstEstimateRate": [
+     25.95,
+     1
+    ]
+   }
   }
  ]
 }
