@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-08-11T02:32",
+ "checked_at": "2026-08-11T05:06",
  "zonal_ladder": [
   {
    "ymd": "20250501",
@@ -238,6 +238,471 @@
  "zonal_used_tags": {
   "ZonalPrice": 72
  },
+ "root_listing_http": 200,
+ "root_dirs_total": 140,
+ "root_dirs_price": [
+  "DAConstrShadowPrices",
+  "DAHourlyEnergyLMP",
+  "DAHourlyIntertieLMP",
+  "DAHourlyIntertieORLMP",
+  "DAHourlyIntertiePass1LMP",
+  "DAHourlyIntertiePass1ORLMP",
+  "DAHourlyORLMP",
+  "DAHourlyOntarioZonalPrice",
+  "DAHourlyZonal",
+  "DAShadowPrices",
+  "DemandZonal",
+  "DispAreaOpResAndEnergyCalled",
+  "DispUnconsHOEP",
+  "NISLShadowPrices",
+  "OntarioElectEnergy",
+  "PredispHourlyEnergyLMP",
+  "PredispHourlyIntertieLMP",
+  "PredispHourlyIntertieORLMP",
+  "PredispHourlyORLMP",
+  "PredispHourlyOntarioZonalPrice",
+  "PredispHourlyZonal",
+  "PredispMktPrice",
+  "PredispShadowPrices",
+  "PriceDeltaVirtualTransactionDaily",
+  "PriceDeltaVirtualTransactionYearly",
+  "PriceHOEPAverage",
+  "PriceHOEPPredispOR",
+  "PriceNodal",
+  "RealTimeIntertieLMP",
+  "RealTimeIntertieORLMP",
+  "RealtimeConstrShadowPrices",
+  "RealtimeDemandZonal",
+  "RealtimeEnergyLMP",
+  "RealtimeMktDisaggPrice",
+  "RealtimeMktPrice",
+  "RealtimeMktPriceYear",
+  "RealtimeORLMP",
+  "RealtimeOntarioZonalPrice",
+  "RealtimeShadowPrices",
+  "RealtimeZonalEnergyPrices"
+ ],
+ "root_dirs_skipped": [
+  "RealtimeConstrShadowPrices",
+  "RealtimeDemandZonal",
+  "RealtimeEnergyLMP",
+  "RealtimeMktDisaggPrice",
+  "RealtimeMktPrice",
+  "RealtimeMktPriceYear",
+  "RealtimeORLMP",
+  "RealtimeOntarioZonalPrice",
+  "RealtimeShadowPrices",
+  "RealtimeZonalEnergyPrices"
+ ],
+ "annual_csv_checked": [
+  {
+   "url": "https://reports-public.ieso.ca/public/DAConstrShadowPrices/PUB_DAConstrShadowPrices_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAConstrShadowPrices/PUB_DAConstrShadowPrices_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyEnergyLMP/PUB_DAHourlyEnergyLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyEnergyLMP/PUB_DAHourlyEnergyLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertieLMP/PUB_DAHourlyIntertieLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertieLMP/PUB_DAHourlyIntertieLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertieORLMP/PUB_DAHourlyIntertieORLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertieORLMP/PUB_DAHourlyIntertieORLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertiePass1LMP/PUB_DAHourlyIntertiePass1LMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertiePass1LMP/PUB_DAHourlyIntertiePass1LMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertiePass1ORLMP/PUB_DAHourlyIntertiePass1ORLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyIntertiePass1ORLMP/PUB_DAHourlyIntertiePass1ORLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyORLMP/PUB_DAHourlyORLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyORLMP/PUB_DAHourlyORLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyOntarioZonalPrice/PUB_DAHourlyOntarioZonalPrice_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyOntarioZonalPrice/PUB_DAHourlyOntarioZonalPrice_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyZonal/PUB_DAHourlyZonal_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAHourlyZonal/PUB_DAHourlyZonal_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAShadowPrices/PUB_DAShadowPrices_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DAShadowPrices/PUB_DAShadowPrices_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2025.csv",
+   "http": 200,
+   "len": 654029,
+   "ok": true
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
+   "http": 200,
+   "len": 397541,
+   "ok": true
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DispAreaOpResAndEnergyCalled/PUB_DispAreaOpResAndEnergyCalled_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DispAreaOpResAndEnergyCalled/PUB_DispAreaOpResAndEnergyCalled_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DispUnconsHOEP/PUB_DispUnconsHOEP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/DispUnconsHOEP/PUB_DispUnconsHOEP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/NISLShadowPrices/PUB_NISLShadowPrices_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/NISLShadowPrices/PUB_NISLShadowPrices_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/OntarioElectEnergy/PUB_OntarioElectEnergy_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/OntarioElectEnergy/PUB_OntarioElectEnergy_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyEnergyLMP/PUB_PredispHourlyEnergyLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyEnergyLMP/PUB_PredispHourlyEnergyLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyIntertieLMP/PUB_PredispHourlyIntertieLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyIntertieLMP/PUB_PredispHourlyIntertieLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyIntertieORLMP/PUB_PredispHourlyIntertieORLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyIntertieORLMP/PUB_PredispHourlyIntertieORLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyORLMP/PUB_PredispHourlyORLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyORLMP/PUB_PredispHourlyORLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyOntarioZonalPrice/PUB_PredispHourlyOntarioZonalPrice_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyOntarioZonalPrice/PUB_PredispHourlyOntarioZonalPrice_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyZonal/PUB_PredispHourlyZonal_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispHourlyZonal/PUB_PredispHourlyZonal_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispMktPrice/PUB_PredispMktPrice_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispMktPrice/PUB_PredispMktPrice_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispShadowPrices/PUB_PredispShadowPrices_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PredispShadowPrices/PUB_PredispShadowPrices_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceDeltaVirtualTransactionDaily/PUB_PriceDeltaVirtualTransactionDaily_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceDeltaVirtualTransactionDaily/PUB_PriceDeltaVirtualTransactionDaily_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceDeltaVirtualTransactionYearly/PUB_PriceDeltaVirtualTransactionYearly_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceDeltaVirtualTransactionYearly/PUB_PriceDeltaVirtualTransactionYearly_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceHOEPAverage/PUB_PriceHOEPAverage_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceHOEPAverage/PUB_PriceHOEPAverage_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
+   "http": 200,
+   "len": 155593,
+   "ok": true
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceNodal/PUB_PriceNodal_2025.csv",
+   "http": 200,
+   "len": 279659,
+   "ok": true
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/PriceNodal/PUB_PriceNodal_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/RealTimeIntertieLMP/PUB_RealTimeIntertieLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/RealTimeIntertieLMP/PUB_RealTimeIntertieLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/RealTimeIntertieORLMP/PUB_RealTimeIntertieORLMP_2025.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  },
+  {
+   "url": "https://reports-public.ieso.ca/public/RealTimeIntertieORLMP/PUB_RealTimeIntertieORLMP_2026.csv",
+   "http": 404,
+   "len": 196,
+   "ok": false
+  }
+ ],
+ "annual_csv_found": {
+  "DemandZonal_2025": {
+   "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2025.csv",
+   "len": 654029,
+   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-01-31 08:00:18,,,,,,,,,,,,,,\n\\\\For 2025,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2025-01-01,1,13887,588,1319,897,808,4860,995,98,2570,464,1498,14098,21"
+  },
+  "DemandZonal_2026": {
+   "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
+   "len": 397541,
+   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-08-10 08:00:11,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
+  },
+  "PriceHOEPPredispOR_2025": {
+   "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
+   "len": 155593,
+   "head": "\\\\Yearly HOEP OR Predispatch Report,,,,,,,,\n\\\\Created at 2025-05-01 08:00:15,,,,,,,,\n\\\\For 2025,,,,,,,,\nDate,Hour,HOEP,Hour 1 Predispatch,Hour 2 Predispatch,Hour 3 Predispatch,OR 10 Min Sync,OR 10 Min non-sync,OR 30 Min\n2025-01-01,1,21.31,20.40,40.39,40.41,0.98,0.16,0.16\n2025-01-01,2,26.23,26.00,26."
+  },
+  "PriceNodal_2025": {
+   "url": "https://reports-public.ieso.ca/public/PriceNodal/PUB_PriceNodal_2025.csv",
+   "len": 279659,
+   "head": "\\\\Hourly Nodal Prices Report,,,,,,,,,,,,,,,,\n\\\\Created at 2025-05-01 08:00:22,,,,,,,,,,,,,,,,\n\\\\For 2025,,,,,,,,,,,,,,,,\nZones,,Reference,North West,North West,North West,North East,North East,North East,Ottawa,East,Toronto,Essa,Bruce,South West,Niagara,West\nDate,Hour,Richview,Atikokan,Pineportage,T"
+  }
+ },
+ "backfill_sources": {
+  "PriceHOEPPredispOR_2025": {
+   "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
+   "rows_all": 2880,
+   "rows_used": 0,
+   "cols": [
+    "Date",
+    "Hour",
+    "HOEP",
+    "Hour 1 Predispatch",
+    "Hour 2 Predispatch",
+    "Hour 3 Predispatch",
+    "OR 10 Min Sync",
+    "OR 10 Min non-sync",
+    "OR 30 Min"
+   ],
+   "value_col": "HOEP",
+   "zone_col": null
+  }
+ },
+ "backfill_notes": [
+  "DemandZonal_2025: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Ontario Demand', 'Northwest', 'Northeast', 'Ottawa', 'East', 'Toronto']",
+  "DemandZonal_2026: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Ontario Demand', 'Northwest', 'Northeast', 'Ottawa', 'East', 'Toronto']",
+  "PriceNodal_2025: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Richview', 'Atikokan', 'Pineportage', 'Thunderbay', 'Andrews', 'Canyon']"
+ ],
  "ga_struct": {
   "tag_counts": {
    "Document": 1,

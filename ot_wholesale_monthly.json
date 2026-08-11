@@ -1,6 +1,6 @@
 {
  "source": "IESO public reports (Ontario)",
- "version": "v4",
+ "version": "v5",
  "zone": "OT",
  "unit": "CAD/MWh",
  "merge_policy": "존가격은 ym 기준 병합. 신규 days >= 기존 days 인 달만 교체(롤링 절단 보호). HOEP·GA도 수집 0이면 기존 유지.",
@@ -24,6 +24,36 @@
     "ZonalPrice": 72
    },
    "components_note": "components = 같은 파일에서 하루 24개로 오는 다른 수치 태그의 월평균(LossPriceCapped·CongestionPriceCapped 등). ZonalPrice가 총액인지 에너지분인지 XSD로 확정할 때 쓴다."
+  },
+  "zonal_backfill": {
+   "desc": "개편 후 결손구간(2025-05~)을 연간 CSV(PUB_{폴더}_{연도}.csv)에서 되찾은 계열. DA/RT·총액/에너지분 정의가 미확인이므로 series_zonal 에 병합하지 않는다.",
+   "months": 0,
+   "range": null,
+   "sources": {
+    "PriceHOEPPredispOR_2025": {
+     "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
+     "rows_all": 2880,
+     "rows_used": 0,
+     "cols": [
+      "Date",
+      "Hour",
+      "HOEP",
+      "Hour 1 Predispatch",
+      "Hour 2 Predispatch",
+      "Hour 3 Predispatch",
+      "OR 10 Min Sync",
+      "OR 10 Min non-sync",
+      "OR 30 Min"
+     ],
+     "value_col": "HOEP",
+     "zone_col": null
+    }
+   },
+   "unresolved": [
+    "DemandZonal_2025: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Ontario Demand', 'Northwest', 'Northeast', 'Ottawa', 'East', 'Toronto']",
+    "DemandZonal_2026: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Ontario Demand', 'Northwest', 'Northeast', 'Ottawa', 'East', 'Toronto']",
+    "PriceNodal_2025: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Richview', 'Atikokan', 'Pineportage', 'Thunderbay', 'Andrews', 'Canyon']"
+   ]
   }
  },
  "note": "⚠️ HOEP와 존가격은 가격 정의가 달라 하나로 이어붙이지 않았다(레짐 단절이 ETS를 오염시킴). 파일럿이 두 계열을 각각 받아 판단한다. all-in = 에너지 + GA(Class A·ICI) + 송전(월 최대수요 kW) + 규제요금.",
@@ -33,7 +63,23 @@
   "months": 13,
   "from": "2025-05",
   "to": "2026-05",
-  "note": "IESO 롤링 윈도로 이미 삭제된 구간 — 영구 결손"
+  "missing": [
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12",
+   "2026-01",
+   "2026-02",
+   "2026-03",
+   "2026-04",
+   "2026-05"
+  ],
+  "backfilled": [],
+  "note": "일별 존가격 롤링 윈도(≈72일) 밖 구간. backfilled 는 연간 CSV로 되찾은 달, missing 은 아직 복구 경로가 없는 달."
  },
  "used_urls": {
   "2018": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2018.csv",
@@ -521,5 +567,6 @@
    },
    "vintage": "2026-08-11"
   }
- ]
+ ],
+ "series_zonal_backfill": []
 }
