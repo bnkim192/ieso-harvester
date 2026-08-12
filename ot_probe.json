@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-08-11T14:43",
+ "checked_at": "2026-08-12T14:42",
  "zonal_ladder": [
   {
    "ymd": "20250501",
@@ -236,7 +236,7 @@
   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- Day-Ahead Hourly Ontario Zonal Energy Price Report XML Schema -->\n<xs:schema targetNamespace=\"http://www.ieso.ca/schema\" elementFormDefault=\"qualified\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\t<!-- Following stuff is report specific -->\n\t<xs:include schemaLocation=\"Document_r1.xsd\"/>\n\t<xs:element name=\"DocBody\">\n\t\t<xs:annotation>\n\t\t\t<xs:documentation>Document Body</xs:documentation>\n\t\t</xs:annotation>\n\t\t<xs:complexType>\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:element name=\"DeliveryDate\" type=\"xs:date\">\n\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t<xs:documentation>The Date for which this predispatch data applies</xs:documentation>\n\t\t\t\t\t</xs:annotation>\n\t\t\t\t</xs:element>\n\t\t\t\t<xs:element name=\"HourlyPriceComponents\" maxOccurs=\"24\">\n\t\t\t\t\t<xs:complexType>\n\t\t\t\t\t\t<xs:sequence>\n\t\t\t\t\t\t\t<xs:element name=\"PricingHour\" type=\"Hour1To24\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>The Intertie Pricing Location for which the LMP applies</xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"ZonalPrice\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit) </xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"LossPriceCapped\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs component"
  },
  "zonal_used_tags": {
-  "ZonalPrice": 72
+  "ZonalPrice": 73
  },
  "root_listing_http": 200,
  "root_dirs_total": 140,
@@ -424,7 +424,7 @@
   {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
    "http": 200,
-   "len": 399341,
+   "len": 401139,
    "ok": true
   },
   {
@@ -664,8 +664,8 @@
   },
   "DemandZonal_2026": {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
-   "len": 399341,
-   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-08-11 08:00:11,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
+   "len": 401139,
+   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-08-12 08:00:12,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
   },
   "PriceHOEPPredispOR_2025": {
    "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
