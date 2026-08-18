@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-08-17T11:54",
+ "checked_at": "2026-08-18T11:56",
  "zonal_ladder": [
   {
    "ymd": "20250501",
@@ -236,7 +236,7 @@
   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- Day-Ahead Hourly Ontario Zonal Energy Price Report XML Schema -->\n<xs:schema targetNamespace=\"http://www.ieso.ca/schema\" elementFormDefault=\"qualified\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\t<!-- Following stuff is report specific -->\n\t<xs:include schemaLocation=\"Document_r1.xsd\"/>\n\t<xs:element name=\"DocBody\">\n\t\t<xs:annotation>\n\t\t\t<xs:documentation>Document Body</xs:documentation>\n\t\t</xs:annotation>\n\t\t<xs:complexType>\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:element name=\"DeliveryDate\" type=\"xs:date\">\n\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t<xs:documentation>The Date for which this predispatch data applies</xs:documentation>\n\t\t\t\t\t</xs:annotation>\n\t\t\t\t</xs:element>\n\t\t\t\t<xs:element name=\"HourlyPriceComponents\" maxOccurs=\"24\">\n\t\t\t\t\t<xs:complexType>\n\t\t\t\t\t\t<xs:sequence>\n\t\t\t\t\t\t\t<xs:element name=\"PricingHour\" type=\"Hour1To24\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>The Intertie Pricing Location for which the LMP applies</xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"ZonalPrice\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit) </xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"LossPriceCapped\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs component"
  },
  "zonal_used_tags": {
-  "ZonalPrice": 78
+  "ZonalPrice": 79
  },
  "root_listing_http": 200,
  "root_dirs_total": 140,
@@ -424,7 +424,7 @@
   {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
    "http": 200,
-   "len": 408285,
+   "len": 410076,
    "ok": true
   },
   {
@@ -664,8 +664,8 @@
   },
   "DemandZonal_2026": {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
-   "len": 408285,
-   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-08-16 08:00:11,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
+   "len": 410076,
+   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-08-17 08:00:10,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
   },
   "PriceHOEPPredispOR_2025": {
    "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
@@ -733,51 +733,51 @@
    },
    "FirstEstimateRate": {
     "n": 1,
-    "min": 115.93,
-    "max": 115.93,
-    "mean": 115.93,
+    "min": 3.0,
+    "max": 3.0,
+    "mean": 3.0,
     "sample": [
-     115.93
+     3.0
     ]
    },
    "SecondEstimate": {
     "n": 1,
-    "min": 216393725.0,
-    "max": 216393725.0,
-    "mean": 216393725.0,
+    "min": 250565317.0,
+    "max": 250565317.0,
+    "mean": 250565317.0,
     "sample": [
-     216393725.0
+     250565317.0
     ]
    },
    "SecondEstimateRate": {
     "n": 1,
-    "min": -1.76,
-    "max": -1.76,
-    "mean": -1.76,
+    "min": 17.46,
+    "max": 17.46,
+    "mean": 17.46,
     "sample": [
-     -1.76
+     17.46
     ]
    },
    "Actual": {
     "n": 1,
-    "min": 176156815.0,
-    "max": 176156815.0,
-    "mean": 176156815.0,
+    "min": 332023003.0,
+    "max": 332023003.0,
+    "mean": 332023003.0,
     "sample": [
-     176156815.0
+     332023003.0
     ]
    },
    "ActualRate": {
     "n": 1,
-    "min": 14.38,
-    "max": 14.38,
-    "mean": 14.38,
+    "min": 30.1,
+    "max": 30.1,
+    "mean": 30.1,
     "sample": [
-     14.38
+     30.1
     ]
    }
   },
-  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/GlobalAdjustment_HTML_t1-2.xsl\" ?>\n<Document docID=\"GlobalAdjustment\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ieso.ca/schema https://reports-public.ieso.ca/docrefs/schema/GlobalAdjustment_r1.xsd\">\n<DocHeader>\n<DocTitle>IESO Global Adjustment Class B Rates</DocTitle>\n<DocRevision>1</DocRevision>\n<DocConfidentiality>\n<DocConfClass>PUB</DocConfClass>\n</DocConfidentiality>\n<CreatedAt>2025-08-15T14:30:15</CreatedAt>\n</DocHeader>\n<DocBody>\n<TradeMonth>2025-07</TradeMonth>\n<GAValues>\n<FirstEstim"
+  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/GlobalAdjustment_HTML_t1-2.xsl\" ?>\n<Document docID=\"GlobalAdjustment\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ieso.ca/schema https://reports-public.ieso.ca/docrefs/schema/GlobalAdjustment_r1.xsd\">\n<DocHeader>\n<DocTitle>IESO Global Adjustment Class B Rates</DocTitle>\n<DocRevision>1</DocRevision>\n<DocConfidentiality>\n<DocConfClass>PUB</DocConfClass>\n</DocConfidentiality>\n<CreatedAt>2025-09-15T14:30:11</CreatedAt>\n</DocHeader>\n<DocBody>\n<TradeMonth>2025-08</TradeMonth>\n<GAValues>\n<FirstEstim"
  },
  "ga_xsd": {
   "url": "https://reports-public.ieso.ca/docrefs/schema/GlobalAdjustment_r1.xsd",
