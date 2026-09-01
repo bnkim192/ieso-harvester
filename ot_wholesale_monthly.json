@@ -15,13 +15,13 @@
   },
   "zonal": {
    "desc": "개편 후 Day-Ahead Hourly Ontario Zonal Price(일별 XML 월평균). 태그 ZonalPrice",
-   "months": 3,
+   "months": 4,
    "range": [
     "2026-06",
-    "2026-08"
+    "2026-09"
    ],
    "used_tags": {
-    "ZonalPrice": 62
+    "ZonalPrice": 63
    },
    "components_note": "components = 같은 파일에서 하루 24개로 오는 다른 수치 태그의 월평균(LossPriceCapped·CongestionPriceCapped 등). ZonalPrice가 총액인지 에너지분인지 XSD로 확정할 때 쓴다."
   },
@@ -57,7 +57,7 @@
   }
  },
  "note": "⚠️ HOEP와 존가격은 가격 정의가 달라 하나로 이어붙이지 않았다(레짐 단절이 ETS를 오염시킴). 파일럿이 두 계열을 각각 받아 판단한다. all-in = 에너지 + GA(Class A·ICI) + 송전(월 최대수요 kW) + 규제요금.",
- "latest": "2026-08",
+ "latest": "2026-09",
  "lag_months": 0,
  "gap": {
   "months": 13,
@@ -566,6 +566,17 @@
     "ZonalPrice": 63.875
    },
    "vintage": "2026-08-31"
+  },
+  {
+   "ym": "2026-09",
+   "cad_mwh": 97.425,
+   "days": 1,
+   "components": {
+    "CongestionPriceCapped": -0.0037,
+    "LossPriceCapped": -0.4583,
+    "ZonalPrice": 97.4254
+   },
+   "vintage": "2026-09-01"
   }
  ],
  "series_zonal_backfill": []
