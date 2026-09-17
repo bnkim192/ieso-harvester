@@ -21,7 +21,7 @@
     "2026-09"
    ],
    "used_tags": {
-    "ZonalPrice": 74
+    "ZonalPrice": 79
    },
    "components_note": "components = 같은 파일에서 하루 24개로 오는 다른 수치 태그의 월평균(LossPriceCapped·CongestionPriceCapped 등). ZonalPrice가 총액인지 에너지분인지 XSD로 확정할 때 쓴다."
   },
@@ -29,7 +29,26 @@
    "desc": "개편 후 결손구간(2025-05~)을 연간 CSV(PUB_{폴더}_{연도}.csv)에서 되찾은 계열. DA/RT·총액/에너지분 정의가 미확인이므로 series_zonal 에 병합하지 않는다.",
    "months": 0,
    "range": null,
-   "sources": {},
+   "sources": {
+    "PriceHOEPPredispOR_2025": {
+     "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
+     "rows_all": 2880,
+     "rows_used": 0,
+     "cols": [
+      "Date",
+      "Hour",
+      "HOEP",
+      "Hour 1 Predispatch",
+      "Hour 2 Predispatch",
+      "Hour 3 Predispatch",
+      "OR 10 Min Sync",
+      "OR 10 Min non-sync",
+      "OR 30 Min"
+     ],
+     "value_col": "HOEP",
+     "zone_col": null
+    }
+   },
    "unresolved": [
     "DemandZonal_2025: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Ontario Demand', 'Northwest', 'Northeast', 'Ottawa', 'East', 'Toronto']",
     "DemandZonal_2026: 날짜/가격 컬럼 미검출 cols=['Date', 'Hour', 'Ontario Demand', 'Northwest', 'Northeast', 'Ottawa', 'East', 'Toronto']",
@@ -550,14 +569,14 @@
   },
   {
    "ym": "2026-09",
-   "cad_mwh": 55.58,
-   "days": 16,
+   "cad_mwh": 55.99,
+   "days": 17,
    "components": {
-    "CongestionPriceCapped": 0.0659,
-    "LossPriceCapped": 0.0166,
-    "ZonalPrice": 55.5799
+    "CongestionPriceCapped": 0.0621,
+    "LossPriceCapped": 0.0422,
+    "ZonalPrice": 55.9904
    },
-   "vintage": "2026-09-16"
+   "vintage": "2026-09-17"
   }
  ],
  "series_zonal_backfill": []
