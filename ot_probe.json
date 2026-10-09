@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-08T17:48",
+ "checked_at": "2026-10-09T17:23",
  "zonal_ladder": [
   {
    "ymd": "20250501",
@@ -436,7 +436,7 @@
   {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
    "http": 200,
-   "len": 502212,
+   "len": 503968,
    "ok": true
   },
   {
@@ -676,8 +676,8 @@
   },
   "DemandZonal_2026": {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
-   "len": 502212,
-   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-10-08 08:00:18,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
+   "len": 503968,
+   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-10-09 08:00:17,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
   },
   "PriceHOEPPredispOR_2025": {
    "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",
