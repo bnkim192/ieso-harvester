@@ -21,7 +21,7 @@
     "2026-10"
    ],
    "used_tags": {
-    "ZonalPrice": 84
+    "ZonalPrice": 85
    },
    "components_note": "components = 같은 파일에서 하루 24개로 오는 다른 수치 태그의 월평균(LossPriceCapped·CongestionPriceCapped 등). ZonalPrice가 총액인지 에너지분인지 XSD로 확정할 때 쓴다."
   },
@@ -580,14 +580,14 @@
   },
   {
    "ym": "2026-10",
-   "cad_mwh": 54.149,
-   "days": 23,
+   "cad_mwh": 54.13,
+   "days": 24,
    "components": {
-    "CongestionPriceCapped": -1.1712,
-    "LossPriceCapped": 0.0919,
-    "ZonalPrice": 54.1491
+    "CongestionPriceCapped": -1.1217,
+    "LossPriceCapped": 0.0945,
+    "ZonalPrice": 54.1301
    },
-   "vintage": "2026-10-23"
+   "vintage": "2026-10-24"
   }
  ],
  "series_zonal_backfill": []
