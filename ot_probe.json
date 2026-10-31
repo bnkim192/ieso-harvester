@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-30T16:58",
+ "checked_at": "2026-10-31T16:00",
  "zonal_ladder": [
   {
    "ymd": "20250501",
@@ -93,9 +93,9 @@
   },
   {
    "ymd": "20260801",
-   "http": 200,
-   "len": 6063,
-   "ok": true
+   "http": 404,
+   "len": 196,
+   "ok": false
   },
   {
    "ymd": "20260901",
@@ -110,7 +110,7 @@
    "ok": true
   }
  ],
- "zonal_oldest_month": "2026-08",
+ "zonal_oldest_month": "2026-09",
  "zonal_struct": {
   "tag_counts": {
    "HourlyPriceComponents": 24,
@@ -155,48 +155,48 @@
    },
    "ZonalPrice": {
     "n": 24,
-    "min": 31.46,
-    "max": 86.85,
-    "mean": 56.92,
+    "min": 37.9,
+    "max": 220.98,
+    "mean": 97.425,
     "sample": [
-     38.27,
-     34.36,
-     32.51,
-     32.22,
-     32.3,
-     31.46
+     42.56,
+     41.55,
+     37.9,
+     37.93,
+     43.19,
+     49.22
     ]
    },
    "LossPriceCapped": {
     "n": 24,
-    "min": -0.16,
-    "max": 0.33,
-    "mean": 0.128,
+    "min": -1.5,
+    "max": 0.31,
+    "mean": -0.458,
     "sample": [
-     0.27,
+     0.22,
      0.31,
-     0.33,
+     0.29,
      0.31,
-     0.33,
-     0.3
+     0.25,
+     0.15
     ]
    },
    "CongestionPriceCapped": {
     "n": 24,
-    "min": -0.86,
-    "max": 0.98,
-    "mean": -0.236,
+    "min": -0.03,
+    "max": 0.0,
+    "mean": -0.004,
     "sample": [
-     -0.38,
-     -0.34,
-     -0.32,
-     -0.32,
-     -0.33,
-     -0.3
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
     ]
    }
   },
-  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/DAHourlyOntarioZonalPrice_HTML_t1-1.xsl\" ?>\n<Document docID=\"DAHourlyOntarioZonalPrice\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ieso.ca/schema https://reports-public.ieso.ca/docrefs/schema/DAHourlyOntarioZonalPrice_r1.xsd\">\n<DocHeader>\n<DocTitle>Day Ahead Hourly Ontario Zonal Energy Price Report</DocTitle>\n<DocRevision>1</DocRevision>\n<DocConfidentiality>\n<DocConfClass>PUB</DocConfClass>\n</DocConfidentiality>\n<CreatedAt>2026-07-31T12:31:21</CreatedAt>\n</DocHeader>\n<DocBody>\n<DeliveryDate>"
+  "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://reports-public.ieso.ca/docrefs/stylesheet/DAHourlyOntarioZonalPrice_HTML_t1-1.xsl\" ?>\n<Document docID=\"DAHourlyOntarioZonalPrice\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ieso.ca/schema https://reports-public.ieso.ca/docrefs/schema/DAHourlyOntarioZonalPrice_r1.xsd\">\n<DocHeader>\n<DocTitle>Day Ahead Hourly Ontario Zonal Energy Price Report</DocTitle>\n<DocRevision>1</DocRevision>\n<DocConfidentiality>\n<DocConfClass>PUB</DocConfClass>\n</DocConfidentiality>\n<CreatedAt>2026-08-31T12:31:15</CreatedAt>\n</DocHeader>\n<DocBody>\n<DeliveryDate>"
  },
  "zonal_xsd": {
   "url": "https://reports-public.ieso.ca/docrefs/schema/DAHourlyOntarioZonalPrice_r1.xsd",
@@ -248,7 +248,7 @@
   "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- Day-Ahead Hourly Ontario Zonal Energy Price Report XML Schema -->\n<xs:schema targetNamespace=\"http://www.ieso.ca/schema\" elementFormDefault=\"qualified\" xmlns=\"http://www.ieso.ca/schema\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\t<!-- Following stuff is report specific -->\n\t<xs:include schemaLocation=\"Document_r1.xsd\"/>\n\t<xs:element name=\"DocBody\">\n\t\t<xs:annotation>\n\t\t\t<xs:documentation>Document Body</xs:documentation>\n\t\t</xs:annotation>\n\t\t<xs:complexType>\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:element name=\"DeliveryDate\" type=\"xs:date\">\n\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t<xs:documentation>The Date for which this predispatch data applies</xs:documentation>\n\t\t\t\t\t</xs:annotation>\n\t\t\t\t</xs:element>\n\t\t\t\t<xs:element name=\"HourlyPriceComponents\" maxOccurs=\"24\">\n\t\t\t\t\t<xs:complexType>\n\t\t\t\t\t\t<xs:sequence>\n\t\t\t\t\t\t\t<xs:element name=\"PricingHour\" type=\"Hour1To24\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>The Intertie Pricing Location for which the LMP applies</xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"ZonalPrice\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs components (Energy Losses, Energy Congestion, External Congestion and Net Interchange Scheduling Limit) </xs:documentation>\n\t\t\t\t\t\t\t\t</xs:annotation>\n\t\t\t\t\t\t\t</xs:element>\n\t\t\t\t\t\t\t<xs:element name=\"LossPriceCapped\" type=\"empty_or_decimal\">\n\t\t\t\t\t\t\t\t<xs:annotation>\n\t\t\t\t\t\t\t\t\t<xs:documentation>LMP and itâs component"
  },
  "zonal_used_tags": {
-  "ZonalPrice": 91
+  "ZonalPrice": 61
  },
  "root_listing_http": 200,
  "root_dirs_total": 140,
@@ -436,7 +436,7 @@
   {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
    "http": 200,
-   "len": 540965,
+   "len": 542722,
    "ok": true
   },
   {
@@ -676,8 +676,8 @@
   },
   "DemandZonal_2026": {
    "url": "https://reports-public.ieso.ca/public/DemandZonal/PUB_DemandZonal_2026.csv",
-   "len": 540965,
-   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-10-30 08:00:16,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
+   "len": 542722,
+   "head": "\\\\Hourly Zonal Demand Report,,,,,,,,,,,,,,\n\\\\Created at 2026-10-31 08:00:12,,,,,,,,,,,,,,\n\\\\For 2026,,,,,,,,,,,,,,\nDate,Hour,Ontario Demand,Northwest,Northeast,Ottawa,East,Toronto,Essa,Bruce,Southwest,Niagara,West,Zone Total,Diff\n2026-01-01,1,16526,688,1474,1049,1085,5568,1219,96,3000,569,1949,16697"
   },
   "PriceHOEPPredispOR_2025": {
    "url": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2025.csv",

@@ -464,9 +464,17 @@
     "FirstEstimateRate": [
      61.09,
      1
+    ],
+    "SecondEstimate": [
+     585028973.0,
+     1
+    ],
+    "SecondEstimateRate": [
+     72.42,
+     1
     ]
    },
-   "vintage": "2026-10-01"
+   "vintage": "2026-10-31"
   }
  ]
 }
