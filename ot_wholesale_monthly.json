@@ -7,7 +7,7 @@
  "regimes": {
   "hoep": {
    "desc": "구 체계 HOEP(단일 온타리오 가격). 2025-05 MRP 개편으로 발행 중단",
-   "months": 88,
+   "months": 64,
    "range": [
     "2018-01",
     "2025-04"
@@ -83,8 +83,6 @@
  },
  "used_urls": {
   "2018": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2018.csv",
-  "2019": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2019.csv",
-  "2020": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2020.csv",
   "2021": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2021.csv",
   "2022": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2022.csv",
   "2023": "https://reports-public.ieso.ca/public/PriceHOEPPredispOR/PUB_PriceHOEPPredispOR_2023.csv",
@@ -150,126 +148,6 @@
   {
    "ym": "2018-12",
    "cad_mwh": 26.605,
-   "n": 744
-  },
-  {
-   "ym": "2019-01",
-   "cad_mwh": 26.363,
-   "n": 744
-  },
-  {
-   "ym": "2019-02",
-   "cad_mwh": 27.081,
-   "n": 672
-  },
-  {
-   "ym": "2019-03",
-   "cad_mwh": 26.696,
-   "n": 744
-  },
-  {
-   "ym": "2019-04",
-   "cad_mwh": 14.79,
-   "n": 720
-  },
-  {
-   "ym": "2019-05",
-   "cad_mwh": 7.012,
-   "n": 744
-  },
-  {
-   "ym": "2019-06",
-   "cad_mwh": 3.679,
-   "n": 720
-  },
-  {
-   "ym": "2019-07",
-   "cad_mwh": 20.532,
-   "n": 744
-  },
-  {
-   "ym": "2019-08",
-   "cad_mwh": 14.813,
-   "n": 744
-  },
-  {
-   "ym": "2019-09",
-   "cad_mwh": 13.37,
-   "n": 720
-  },
-  {
-   "ym": "2019-10",
-   "cad_mwh": 6.55,
-   "n": 744
-  },
-  {
-   "ym": "2019-11",
-   "cad_mwh": 19.624,
-   "n": 720
-  },
-  {
-   "ym": "2019-12",
-   "cad_mwh": 20.589,
-   "n": 744
-  },
-  {
-   "ym": "2020-01",
-   "cad_mwh": 13.923,
-   "n": 744
-  },
-  {
-   "ym": "2020-02",
-   "cad_mwh": 13.995,
-   "n": 696
-  },
-  {
-   "ym": "2020-03",
-   "cad_mwh": 13.44,
-   "n": 744
-  },
-  {
-   "ym": "2020-04",
-   "cad_mwh": 5.782,
-   "n": 720
-  },
-  {
-   "ym": "2020-05",
-   "cad_mwh": 7.31,
-   "n": 744
-  },
-  {
-   "ym": "2020-06",
-   "cad_mwh": 11.221,
-   "n": 720
-  },
-  {
-   "ym": "2020-07",
-   "cad_mwh": 18.599,
-   "n": 744
-  },
-  {
-   "ym": "2020-08",
-   "cad_mwh": 18.169,
-   "n": 744
-  },
-  {
-   "ym": "2020-09",
-   "cad_mwh": 13.783,
-   "n": 720
-  },
-  {
-   "ym": "2020-10",
-   "cad_mwh": 10.645,
-   "n": 744
-  },
-  {
-   "ym": "2020-11",
-   "cad_mwh": 9.544,
-   "n": 720
-  },
-  {
-   "ym": "2020-12",
-   "cad_mwh": 15.162,
    "n": 744
   },
   {
