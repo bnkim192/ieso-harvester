@@ -591,14 +591,14 @@
   },
   {
    "ym": "2026-11",
-   "cad_mwh": 56.11,
-   "days": 18,
+   "cad_mwh": 55.416,
+   "days": 19,
    "components": {
-    "CongestionPriceCapped": 0.1253,
-    "LossPriceCapped": -0.153,
-    "ZonalPrice": 56.1101
+    "CongestionPriceCapped": 0.112,
+    "LossPriceCapped": -0.1486,
+    "ZonalPrice": 55.4164
    },
-   "vintage": "2026-11-17"
+   "vintage": "2026-11-18"
   }
  ],
  "series_zonal_backfill": []
